@@ -11,10 +11,9 @@ function buildUrl(lat, lon){
 
 //grabbing weatherData
 function getWeather(){
-   var lat = 32;
-   var lon = 43;
+
    var options = {
-     url: buildUrl(lat,lon),
+     url: buildUrl(geoplugin_latitude(),geoplugin_longitude()),
      dataType: 'jsonp',
      success: showData,
      error: errorHandler
@@ -39,12 +38,14 @@ function errorHandler(err){
     function showData(data){
         var source= $('#weatherStuff').html();
         var template= Handlebars.compile(source);
+
         var data ={
+          city: geoplugin_city(),
           lat: data.latitude,
           lon: data.longitude,
           icon: data.currently.icon,
           summary: data.currently.summary,
-          time: data.currently.time,
+          time: moment().format('LT'),
           temp: data.currently.temperature
         };
         var html = template(data);
