@@ -7,6 +7,10 @@
     "express": "^4.13.4",
     "morgan": "^1.6.1"
   },
+  "engines": {
+        "node": "0.10.11",
+        "npm": "1.2.25"
+    },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
