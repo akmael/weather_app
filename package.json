@@ -8,8 +8,8 @@
     "morgan": "^1.6.1"
   },
   "engines": {
-        "node": "0.10.11",
-        "npm": "1.2.25"
+        "node": "4.2.4",
+        "npm": "2.14.12"
     },
   "devDependencies": {},
   "scripts": {
