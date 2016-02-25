@@ -8,13 +8,11 @@ function buildUrl(lat, lon){
 
     }
 
-
-
 //grabbing weatherData
 function getWeather(){
      $('#click').fadeOut();//Make button go byebye
    var options = {
-     url: buildUrl(geoplugin_latitude(),geoplugin_longitude()),
+     url: buildUrl(geoplugin_latitude(), geoplugin_longitude()),
      dataType: 'jsonp',
      success: showData,
      error: errorHandler
@@ -90,7 +88,7 @@ function whatYouDo(icon){
         };
         var html = template(data);
         $('#output').html(html);
-        
+
 
 
     };
